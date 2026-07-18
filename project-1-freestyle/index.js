@@ -2,6 +2,7 @@ const express = require("express");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const HOST = "0.0.0.0";
 
 app.get("/", (req, res) => {
   res.status(200).json({
@@ -20,8 +21,8 @@ app.get("/health", (req, res) => {
 });
 
 if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Project 1 API running on port ${PORT}`);
+  app.listen(PORT, HOST, () => {
+    console.log(`Project 1 API running at http://${HOST}:${PORT}`);
   });
 }
 
