@@ -7,7 +7,7 @@ const HOST = "0.0.0.0";
 app.get("/", (req, res) => {
   res.status(200).json({
     status: "ok",
-    project: "project-1-freestylessss",
+    project: "project-1-freestyles",
     message: "Welcome to Project 1 API",
   });
 });
